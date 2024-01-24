@@ -1,3 +1,4 @@
+import { RevocatedTokens } from '../models/revocatedToken';
 import { User } from '../models/user';
 import { Sequelize, Repository } from 'sequelize-typescript';
 
@@ -29,7 +30,7 @@ export class Database {
 			logging: true,  //debug
 			repositoryMode: true
 		});
-		this.connection.addModels([User]);
+		this.connection.addModels([User, RevocatedTokens]);
 		this.syncModels()
 		return this;
 	}

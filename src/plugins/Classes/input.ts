@@ -1,4 +1,3 @@
-
 export class Input {
 	data: any;
 	constructor(input: any) {
